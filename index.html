@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Samuel Burbano's Website</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="console type-effect">
+            <span class="console__user type--bulk">iosamuel@host:~$ </span><span>sudo ./welcome.sh</span><br/>
+            <span class="console__user type--bulk">> </span><span>Welcome to my Personal Website!</span><br/>
+            <span class="console__user type--bulk">> </span><span>Here you will find all about my developer experience</span><br/>
+            <span class="console__user type--bulk">==============</span><br/>
+            <span class="console__user type--bulk">iosamuel@host:~$ </span><span>sudo ./contact.sh</span><br/>
+            <span class="console__user type--bulk">> </span><span>You can contact me at <a href="mailto:me@iosamuel.com">me@iosamuel.com</a></span><br/>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.6/dist/typeit.min.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                let wasBulk = null;
+                const typeSpeed = 50;
+                const typed = new TypeIt(".console", {
+                    cursorChar: "_",
+                    startDelay: 1000,
+                    speed: typeSpeed,
+                    beforeStep: function(step, queue, instance) {
+                        if (step[1] && step[1].className && step[1].className.includes("type--bulk")) {
+                            instance.instances[0] && instance.instances[0].setOptions({
+                                speed: 0,
+                                lifeLike: false
+                            }, null, false);
+                            instance.instances[0] && instance.instances[0].setPace();
+                            wasBulk = step[1].nodeName;
+                        } else if (wasBulk && wasBulk === (step[1] && step[1].nodeName)) {
+                            instance.instances[0] && instance.instances[0].setOptions({
+                                speed: typeSpeed,
+                                lifeLike: true
+                            }, null, false);
+                            instance.instances[0] && instance.instances[0].setPace();
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

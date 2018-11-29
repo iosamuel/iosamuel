@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+body {
+    background: url(imgs/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+a {
+    color: white;
+}
+
+.console {
+    background: #18202d;
+    display: block;
+    padding: 32px 24px;
+    width: 480px;
+    border-radius: 3px;
+    line-height: 1.5em;
+    animation: show-console 1s forwards;
+}
+
+.console__user {
+    color: #147a11;
+}
+
+.type-effect * {
+    display: inline;
+}
+
+@keyframes show-console {
+    from {
+        margin: 0 auto;
+    }
+
+    to {
+        margin: 100px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .console {
+        width: auto;
+    }
+}
