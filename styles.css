@@ -52,3 +52,48 @@ a {
         width: auto;
     }
 }
+
+svg {
+    margin-top: 30px;
+    overflow: visible;
+}
+svg path {
+    transform-origin: 2500px 2700px;
+}
+svg path:first-child {
+    animation: svgCircle 3s infinite;
+}
+svg path:nth-child(3) {
+    animation: svgStick 3s infinite;
+}
+
+svg:hover path:nth-child(2),
+svg:focus path:nth-child(2) {
+    animation: svgCircle 3s;
+}
+svg:hover path:first-child,
+svg:focus path:first-child,
+svg:hover path:nth-child(3),
+svg:focus path:nth-child(3) {
+    animation-play-state: paused;
+}
+
+@keyframes svgCircle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes svgStick {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
