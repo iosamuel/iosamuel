@@ -1,4 +1,4 @@
 # IOSamuel
 My personal website
 
-https://iosamuel.com
+https://iosamuel.dev
