@@ -1,6 +1,7 @@
 @import "../variables";
+
 header {
-  @apply h-20 grid grid-cols-5 fixed w-full top-0 z-50;
+  @apply h-20 grid grid-cols-5 sticky w-full top-0 z-50;
   background: $gray;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -8,7 +9,8 @@ header {
     @apply col-span-3 flex items-center;
 
     img {
-      @apply max-w-full max-h-full inline-block;
+      @apply max-w-full max-h-full inline-block flex-grow-0 flex-shrink-0;
+      flex-basis: 5rem;
     }
 
     figcaption {
@@ -32,7 +34,7 @@ header {
       left: -2.5rem;
     }
 
-    button {
+    .burger {
       @apply w-full h-full text-2xl;
 
       &:focus {
@@ -43,10 +45,53 @@ header {
         color: $orange;
       }
     }
-  }
 
-  .nav-button {
-    display: none;
+    .nav-content {
+      button {
+        @apply text-white text-lg;
+        font-family: ND_LOGOS_REGULAR;
+
+        &:focus {
+          @apply outline-none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      &:not(.show-nav) {
+        .nav-content {
+          @apply hidden;
+        }
+      }
+
+      .nav-content {
+        @apply fixed grid grid-flow-row gap-1 bg-white z-40 w-full left-0;
+        box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+        top: 5rem;
+
+        button {
+          @apply h-20 bg-black;
+
+          &:focus {
+            background: $orange;
+          }
+
+          &.active {
+            background: $orange;
+          }
+        }
+      }
+
+      &.show-nav {
+        .burger {
+          background: $orange;
+        }
+
+        &::before {
+          border-bottom-color: $orange;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -56,6 +101,25 @@ header {
 
     nav {
       @apply col-start-3 col-span-3;
+
+      .nav-content {
+        @apply w-full h-full flex items-center justify-evenly;
+
+        button {
+          span {
+            @apply border-b-4 border-white;
+          }
+
+          &.active,
+          &:focus {
+            color: $orange;
+
+            span {
+              border-color: $orange;
+            }
+          }
+        }
+      }
 
       .nav-button {
         @apply text-lg block;
@@ -78,25 +142,6 @@ header {
       .burger {
         display: none;
       }
-    }
-  }
-}
-
-.nav-content {
-  @apply fixed grid grid-flow-row gap-1 bg-white z-40 w-full;
-  top: 5rem;
-
-  button {
-    @apply h-20 bg-black text-white text-lg;
-    font-family: ND_LOGOS_REGULAR;
-
-    &:focus {
-      @apply outline-none;
-      background: $orange;
-    }
-
-    &.active {
-      background: $orange;
     }
   }
 }

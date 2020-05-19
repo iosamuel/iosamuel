@@ -5,3 +5,13 @@
   font-family: ND_LOGOS_REGULAR;
   src: url("../fonts/ND_LOGOS_REGULAR.ttf");
 }
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+body {
+  background: $gray;
+  font-family: Ubuntu;
+}
