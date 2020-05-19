@@ -9,8 +9,8 @@ header {
     @apply col-span-3 flex items-center;
 
     img {
-      @apply max-w-full max-h-full inline-block flex-grow-0 flex-shrink-0;
-      flex-basis: 5rem;
+      @apply inline-block max-w-none;
+      max-height: 5rem;
     }
 
     figcaption {
