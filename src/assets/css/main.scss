@@ -15,3 +15,15 @@ body {
   background: $gray;
   font-family: Ubuntu;
 }
+
+.content {
+  @apply p-8;
+
+  > div {
+    @apply mb-16;
+  }
+}
+
+a {
+  color: $lighterblue;
+}
