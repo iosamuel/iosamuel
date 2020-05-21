@@ -1,7 +1,7 @@
 @import "../variables";
 
 footer {
-  @apply fixed bottom-0 h-10 w-full flex items-center justify-center;
+  @apply fixed bottom-0 h-10 w-full flex items-center justify-center z-50;
   background: $darkblue;
 
   &::before {

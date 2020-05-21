@@ -11,6 +11,7 @@
     </a>
   </div>
   <div :class="className" v-else>
+    <slot></slot>
     <div class="" v-for="(iconWrap, key) in socialIcons" :key="key">
       <a
         v-for="icon in iconWrap"

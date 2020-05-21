@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <Header />
     <div class="content">
-      <Home></Home>
-      <Contact></Contact>
+      <Home />
+      <About />
+      <Contact />
     </div>
-    <Footer></Footer>
+    <Footer />
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import Home from "@/pages/Home.vue";
+import About from "@/pages/About.vue";
 import Contact from "@/pages/Contact.vue";
 
 export default {
@@ -21,6 +23,7 @@ export default {
     Header,
     Footer,
     Home,
+    About,
     Contact
   },
   data() {

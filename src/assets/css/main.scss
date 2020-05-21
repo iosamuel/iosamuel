@@ -17,7 +17,7 @@ body {
 }
 
 .content {
-  @apply p-8;
+  @apply p-8 max-w-screen-lg mx-auto;
 
   > div {
     @apply mb-16;

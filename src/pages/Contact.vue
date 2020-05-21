@@ -30,7 +30,16 @@
           className="contact-card--bottom"
           :split="true"
           :discord="true"
-        ></SocialIcons>
+        >
+          <div class="discord-icon">
+            <a href="#" class="social-icon discord" rel="noopener noreferrer">
+              <fa :icon="['fab', 'discord']"></fa>
+            </a>
+            <span class="discord-icon__hand">
+              <fa :icon="['far', 'hand-pointer']"></fa>
+            </span>
+          </div>
+        </SocialIcons>
       </div>
     </div>
   </div>

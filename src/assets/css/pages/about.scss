@@ -1,0 +1,73 @@
+@import "../variables";
+
+.about {
+  @apply overflow-hidden;
+
+  > h2 {
+    @apply mb-8 text-center text-3xl;
+    font-family: ND_LOGOS_REGULAR;
+  }
+  &-card {
+    @apply relative;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    grid-template-columns: 0.2fr 1.8fr;
+    background: $lightgray;
+
+    > img {
+      @apply absolute z-20;
+      width: 50px;
+      height: 50px;
+      left: calc(50% - 25px);
+      transform: translateY(-50%);
+    }
+
+    &--right {
+      @apply p-16;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      background: $darkblue;
+
+      img {
+        @apply w-40 rounded-full mx-auto;
+      }
+    }
+
+    &--left {
+      @apply p-4 relative z-10;
+
+      h3 {
+        @apply text-lg;
+        color: $darkblue;
+        font-family: ND_LOGOS_REGULAR;
+      }
+
+      p {
+        @apply text-lg mb-4;
+      }
+    }
+
+    &::after {
+      content: "";
+      @apply w-0 h-0 absolute bottom-0 right-0 z-0;
+      border-bottom: 10rem solid $orange;
+      border-left: 5rem solid transparent;
+    }
+
+    @media screen and (min-width: 768px) {
+      &--right {
+        @apply absolute w-2/6 right-0 p-8;
+      }
+
+      &--left {
+        @apply w-4/6 p-8;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &--right {
+        @apply w-3/12;
+      }
+    }
+  }
+}
