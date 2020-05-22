@@ -12,7 +12,12 @@
             contenido en español que estamos generando para el mundo
           </p>
           <div class="discord-icon">
-            <a href="#" class="social-icon discord" rel="noopener noreferrer">
+            <a
+              href="https://discord.gg/mucYjqJ"
+              target="_blank"
+              class="social-icon discord"
+              rel="noopener noreferrer"
+            >
               <fa :icon="['fab', 'discord']"></fa>
             </a>
             <span class="discord-icon__hand">
@@ -32,7 +37,12 @@
           :discord="true"
         >
           <div class="discord-icon">
-            <a href="#" class="social-icon discord" rel="noopener noreferrer">
+            <a
+              href="https://discord.gg/mucYjqJ"
+              target="_blank"
+              class="social-icon discord"
+              rel="noopener noreferrer"
+            >
               <fa :icon="['fab', 'discord']"></fa>
             </a>
             <span class="discord-icon__hand">

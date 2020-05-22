@@ -6,6 +6,7 @@
       :href="icon.link"
       :class="`social-icon ${icon.name}`"
       rel="noopener noreferrer"
+      target="_blank"
     >
       <fa :icon="['fab', icon.name]"></fa>
     </a>
@@ -19,6 +20,7 @@
         :href="icon.link"
         :class="`social-icon ${icon.name}`"
         rel="noopener noreferrer"
+        target="_blank"
       >
         <fa :icon="['fab', icon.name]"></fa>
       </a>
@@ -33,27 +35,27 @@ export default {
     return {
       icons: [
         {
-          link: "#",
+          link: "https://twitter.com/iosamuel",
           name: "twitter"
         },
         {
-          link: "#",
+          link: "https://facebook.com/iosamuel.dev",
           name: "facebook"
         },
         {
-          link: "#",
+          link: "https://linkedin.com/in/iosamuel",
           name: "linkedin"
         },
         {
-          link: "#",
+          link: "https://github.com/iosamuel",
           name: "github"
         },
         {
-          link: "#",
+          link: "https://twitch.tv/iosamuel",
           name: "twitch"
         },
         {
-          link: "#",
+          link: "https://youtube.com/channel/UCTvtM8ZisSrp9rii77D85Zw",
           name: "youtube"
         }
       ]
