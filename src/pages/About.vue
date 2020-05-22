@@ -40,13 +40,18 @@
           <h3>Skills</h3>
         </div>
       </div>
+      <Skills />
     </div>
   </div>
 </template>
 
 <script>
+import Skills from "@/components/Skills.vue";
+
 export default {
-  components: {}
+  components: {
+    Skills
+  }
 };
 </script>
 

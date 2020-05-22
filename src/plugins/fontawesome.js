@@ -1,7 +1,12 @@
 import Vue from "vue";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBars, faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faArrowCircleUp,
+  faArrowCircleRight,
+  faArrowCircleLeft
+} from "@fortawesome/free-solid-svg-icons";
 import { faHandPointer } from "@fortawesome/free-regular-svg-icons";
 import {
   faTwitter,
@@ -10,13 +15,28 @@ import {
   faGithub,
   faTwitch,
   faYoutube,
-  faDiscord
+  faDiscord,
+  faHtml5,
+  faCss3Alt,
+  faSass,
+  faJs,
+  faVuejs,
+  faNodeJs,
+  faNpm,
+  faGitAlt,
+  faGulp,
+  faJira,
+  faTrello,
+  faLinux,
+  faPython
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(
   faBars,
   faArrowCircleUp,
+  faArrowCircleRight,
+  faArrowCircleLeft,
   faTwitter,
   faFacebook,
   faLinkedin,
@@ -24,7 +44,20 @@ library.add(
   faTwitch,
   faYoutube,
   faDiscord,
-  faHandPointer
+  faHandPointer,
+  faHtml5,
+  faCss3Alt,
+  faSass,
+  faJs,
+  faVuejs,
+  faNodeJs,
+  faNpm,
+  faGitAlt,
+  faGulp,
+  faJira,
+  faTrello,
+  faLinux,
+  faPython
 );
 
 Vue.component("fa", FontAwesomeIcon);
