@@ -6,7 +6,7 @@
       <About ref="about" @visible="changeActive" />
       <Contact ref="contact" @visible="changeActive" />
     </div>
-    <Footer />
+    <Footer @scroll="scroll($event)" />
   </div>
 </template>
 
