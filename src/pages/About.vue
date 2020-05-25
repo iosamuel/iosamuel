@@ -1,5 +1,13 @@
 <template>
-  <div class="about">
+  <div
+    class="about"
+    v-observe-visibility="{
+      callback: visibilityChanged,
+      intersection: {
+        threshold: 0.6
+      }
+    }"
+  >
     <h2>About</h2>
     <div class="about-card">
       <img src="@/assets/images/ios-blackWhite.png" alt="Pengu" />
@@ -51,6 +59,11 @@ import Skills from "@/components/Skills.vue";
 export default {
   components: {
     Skills
+  },
+  methods: {
+    visibilityChanged(visible, { intersectionRatio }) {
+      this.$emit("visible", { from: "about", visible, intersectionRatio });
+    }
   }
 };
 </script>

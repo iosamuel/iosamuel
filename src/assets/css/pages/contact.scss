@@ -1,7 +1,7 @@
 @import "../variables";
 
 .contact {
-  @apply overflow-hidden;
+  @apply overflow-hidden pt-20 mb-20;
 
   > h2 {
     @apply mb-8 text-center text-3xl;

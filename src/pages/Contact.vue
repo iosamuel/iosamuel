@@ -1,5 +1,13 @@
 <template>
-  <div class="contact">
+  <div
+    class="contact"
+    v-observe-visibility="{
+      callback: visibilityChanged,
+      intersection: {
+        threshold: 0.75
+      }
+    }"
+  >
     <h2>Contact</h2>
     <div class="contact-card">
       <img src="@/assets/images/ios-blackWhite.png" alt="Pengu" />
@@ -61,6 +69,11 @@ import SocialIcons from "@/components/SocialIcons.vue";
 export default {
   components: {
     SocialIcons
+  },
+  methods: {
+    visibilityChanged(visible, { intersectionRatio }) {
+      this.$emit("visible", { from: "contact", visible, intersectionRatio });
+    }
   }
 };
 </script>

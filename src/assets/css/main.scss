@@ -17,11 +17,7 @@ body {
 }
 
 .content {
-  @apply p-8 max-w-screen-lg mx-auto;
-
-  > div {
-    @apply mb-16;
-  }
+  @apply p-8 pt-0 max-w-screen-lg mx-auto;
 }
 
 a {

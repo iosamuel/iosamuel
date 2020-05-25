@@ -9,9 +9,27 @@
     </figure>
     <nav :class="{ 'show-nav': showNavContent }">
       <section class="nav-content">
-        <button class="nav-content__button active"><span>Home</span></button>
-        <button class="nav-content__button"><span>About</span></button>
-        <button class="nav-content__button"><span>Contact</span></button>
+        <button
+          class="nav-content__button"
+          :class="{ active: active === 'home' }"
+          @click="navigateTo('home')"
+        >
+          <span>Home</span>
+        </button>
+        <button
+          class="nav-content__button"
+          :class="{ active: active === 'about' }"
+          @click="navigateTo('about')"
+        >
+          <span>About</span>
+        </button>
+        <button
+          class="nav-content__button"
+          :class="{ active: active === 'contact' }"
+          @click="navigateTo('contact')"
+        >
+          <span>Contact</span>
+        </button>
       </section>
       <button class="burger" @click="showNavContent = !showNavContent">
         <fa :icon="['fas', 'bars']"></fa>
@@ -22,10 +40,17 @@
 
 <script>
 export default {
+  props: ["active"],
   data() {
     return {
       showNavContent: false
     };
+  },
+  methods: {
+    navigateTo(where) {
+      this.showNavContent = false;
+      this.$emit("scroll", where);
+    }
   }
 };
 </script>
