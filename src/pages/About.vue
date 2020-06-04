@@ -4,7 +4,11 @@
     v-observe-visibility="{
       callback: visibilityChanged,
       intersection: {
-        threshold: 0.6
+        threshold: 0.6,
+        throttle: 300,
+        throttleOptions: {
+          leading: 'visible'
+        }
       }
     }"
   >
@@ -30,9 +34,12 @@
           </p>
           <p>
             Amo las comunidades y siempre busco organizar o participar en ellas.
-            Hago parte de <a href="#">#EStreamerCoders</a>, una comunidad de
-            streamers programadores en español, donde hago streams regularmente
-            sobre JavaScript y VueJS
+            Hago parte de
+            <a href="https://discord.gg/mucYjqJ" target="_blank">
+              #EStreamerCoders
+            </a>
+            , una comunidad de streamers programadores en español, donde hago
+            streams regularmente sobre JavaScript y VueJS
           </p>
           <h3>Frase</h3>
           <p>

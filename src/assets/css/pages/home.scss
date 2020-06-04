@@ -1,7 +1,7 @@
 @import "../variables";
 
 .home {
-  @apply overflow-hidden pt-20;
+  @apply overflow-hidden pt-32;
 
   > h2 {
     @apply mb-8 text-center text-3xl;
@@ -32,7 +32,7 @@
     }
 
     &--bottom {
-      @apply absolute w-full left-0 bottom-0 h-10 bg-white flex items-center justify-evenly pr-4;
+      @apply absolute w-full left-0 bottom-0 h-10 bg-white flex items-center justify-evenly pr-6;
 
       &::after {
         content: "";
@@ -40,6 +40,10 @@
         border-top: 2.5rem solid $darkblue;
         border-left: 1.75rem solid transparent;
         right: 0;
+      }
+
+      .social-icon {
+        @apply w-10 h-10 text-center;
       }
     }
 
@@ -77,7 +81,7 @@
       }
 
       &--bottom {
-        @apply pr-0;
+        @apply px-2;
         width: 25rem;
         left: calc(50% - 12.5rem);
 

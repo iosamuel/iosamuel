@@ -1,14 +1,17 @@
 <template>
   <div class="skills">
-    <span
+    <button
       v-for="icon in icons"
       :key="icon.icon"
-      v-tooltip.bottom-start="icon.text"
-      :data-color="icon.color"
+      :class="icon.icon"
       class="skills__icon"
+      v-tooltip.bottom-start="{
+        content: icon.text,
+        trigger: 'hover click focus'
+      }"
     >
       <fa :icon="['fab', icon.icon]"></fa>
-    </span>
+    </button>
   </div>
 </template>
 
@@ -19,22 +22,23 @@ export default {
       icons: [
         {
           icon: "html5",
-          text: "Description",
+          text: "HTML & HTML5 API (WebStorage, Offline, Graphics, etc)",
           color: "#CE6809"
         },
         {
           icon: "css3-alt",
-          text: "Description",
+          text: "CSS & CSS3 (Animations, Grid, etc)",
           color: "#E14D4D"
         },
         {
           icon: "sass",
-          text: "Description",
+          text: "Preprocesadores CSS como SASS, Stylus y PostCSS",
           color: "#D62383"
         },
         {
           icon: "js",
-          text: "Description",
+          text:
+            "JavaScript como mi lenguaje principal, usando siempre su última sintaxis descrita por la W3C. Asi cómo También TypeScript y todos sus features.",
           color: "#EFCE58"
         },
         {
@@ -44,37 +48,41 @@ export default {
         },
         {
           icon: "node-js",
-          text: "Description",
+          text:
+            "NodeJS para crear APIs con Express y KOA, GraphQL servers, DBM con Mongoose, etc",
           color: "#35A132"
         },
         {
           icon: "npm",
-          text: "Description",
+          text: "Creación y distribución de paquetes en NPM con y sin lerna.",
           color: "#D22020"
         },
         {
           icon: "git-alt",
-          text: "Description",
+          text: "Version managers como Git altamente usado todos los días.",
           color: "#CD3B1A"
         },
         {
           icon: "gulp",
-          text: "Description",
+          text:
+            "Transpilers/Compilers/Bundlers como Gulp, Webpack, Babel, entre otros.",
           color: "#E11010"
         },
         {
           icon: "trello",
-          text: "Description",
+          text: "Metodologias Agiles (SCRUM) con JIRA o Trello.",
           color: "#3D458B"
         },
         {
           icon: "linux",
-          text: "Description",
+          text:
+            "Manejo de servidores y entornos virtuales (SSH) en sistemas operativos Linux.",
           color: "#000000"
         },
         {
           icon: "python",
-          text: "Description",
+          text:
+            "Python fue mi primer lenguaje principal y he programado muchas cosas con el (juegos, web con Django, desktop aplications con PyQt, etc)",
           color: "#024B6A"
         }
       ]
@@ -90,8 +98,81 @@ export default {
   &__icon {
     @apply text-4xl flex items-center justify-center;
 
-    &:hover {
-      color: attr(data-color);
+    &:focus {
+      @apply outline-none;
+    }
+
+    &.html5 {
+      &:focus,
+      &:hover {
+        color: #ce6809;
+      }
+    }
+    &.css3-alt {
+      &:focus,
+      &:hover {
+        color: #e14d4d;
+      }
+    }
+    &.sass {
+      &:focus,
+      &:hover {
+        color: #d62383;
+      }
+    }
+    &.js {
+      &:focus,
+      &:hover {
+        color: #efce58;
+      }
+    }
+    &.vuejs {
+      &:focus,
+      &:hover {
+        color: #0f7b27;
+      }
+    }
+    &.node-js {
+      &:focus,
+      &:hover {
+        color: #35a132;
+      }
+    }
+    &.npm {
+      &:focus,
+      &:hover {
+        color: #d22020;
+      }
+    }
+    &.git-alt {
+      &:focus,
+      &:hover {
+        color: #cd3b1a;
+      }
+    }
+    &.gulp {
+      &:focus,
+      &:hover {
+        color: #e11010;
+      }
+    }
+    &.trello {
+      &:focus,
+      &:hover {
+        color: #3d458b;
+      }
+    }
+    &.linux {
+      &:focus,
+      &:hover {
+        color: #000000;
+      }
+    }
+    &.python {
+      &:focus,
+      &:hover {
+        color: #024b6a;
+      }
     }
   }
 }

@@ -72,10 +72,6 @@ header {
         button {
           @apply h-20 bg-black;
 
-          &:focus {
-            background: $orange;
-          }
-
           &.active {
             background: $orange;
           }
@@ -110,8 +106,7 @@ header {
             @apply border-b-4 border-white;
           }
 
-          &.active,
-          &:focus {
+          &.active {
             color: $orange;
 
             span {
@@ -129,8 +124,7 @@ header {
           @apply border-b-4 border-white;
         }
 
-        &.active,
-        &:focus {
+        &.active {
           color: $orange;
 
           span {

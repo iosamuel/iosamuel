@@ -16,8 +16,12 @@
         <div class="right__content">
           <h3>Comunidad</h3>
           <p>
-            Puedes hacer parte <a href="#">#EStremaerCoders</a> y ver todo el
-            contenido en español que estamos generando para el mundo
+            Puedes hacer parte
+            <a href="https://discord.gg/mucYjqJ" target="_blank">
+              #EStremaerCoders
+            </a>
+            y ver todo el contenido en español que estamos generando para el
+            mundo
           </p>
           <div class="discord-icon">
             <a
