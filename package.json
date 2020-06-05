@@ -16,7 +16,7 @@
     "core-js": "^3.6.4",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.11",
-    "vue-observe-visibility": "^0.4.6"
+    "vue-observe-visibility": "iosamuel/vue-observe-visibility"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

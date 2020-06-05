@@ -3,7 +3,7 @@ import "./plugins/fontawesome";
 import App from "./App.vue";
 import "./assets/css/main.scss";
 import { VTooltip } from "v-tooltip";
-import { ObserveVisibility } from "vue-observe-visibility";
+import ObserveVisibility from "vue-observe-visibility/src/directives/observe-visibility";
 
 Vue.directive("observe-visibility", ObserveVisibility);
 Vue.directive("tooltip", VTooltip);

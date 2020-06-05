@@ -4,11 +4,7 @@
     v-observe-visibility="{
       callback: visibilityChanged,
       intersection: {
-        threshold: 0.6,
-        throttle: 300,
-        throttleOptions: {
-          leading: 'visible'
-        }
+        threshold: [0, 0.25, 0.5, 0.75, 1]
       }
     }"
   >
@@ -69,7 +65,11 @@ export default {
   },
   methods: {
     visibilityChanged(visible, { intersectionRatio }) {
-      this.$emit("visible", { from: "about", visible, intersectionRatio });
+      this.$emit("visible", {
+        from: "about",
+        visible,
+        intersectionRatio
+      });
     }
   }
 };
