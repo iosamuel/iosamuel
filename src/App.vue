@@ -2,9 +2,21 @@
   <div id="app">
     <Header :active="header.active" @scroll="scroll($event)" />
     <div class="content">
-      <Home ref="home" @visible="changeActive" />
-      <About ref="about" @visible="changeActive" />
-      <Contact ref="contact" @visible="changeActive" />
+      <Home
+        ref="home"
+        :active="header.active === 'home'"
+        @visible="changeActive"
+      />
+      <About
+        ref="about"
+        :active="header.active === 'about'"
+        @visible="changeActive"
+      />
+      <Contact
+        ref="contact"
+        :active="header.active === 'contact'"
+        @visible="changeActive"
+      />
     </div>
     <Footer @scroll="scroll($event)" />
   </div>

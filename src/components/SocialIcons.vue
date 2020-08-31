@@ -77,6 +77,16 @@ export default {
 .social-icon {
   @apply text-2xl;
 
+  svg {
+    @apply transition-transform duration-75 ease-in;
+  }
+
+  &:hover {
+    svg {
+      @apply transform scale-125;
+    }
+  }
+
   &.twitter {
     color: #53a6e2;
   }

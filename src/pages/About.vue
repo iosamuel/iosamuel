@@ -9,7 +9,7 @@
     }"
   >
     <h2>About</h2>
-    <div class="about-card">
+    <div class="about-card" :class="{ active, inactive: !active }">
       <img src="@/assets/images/ios-blackWhite.png" alt="Pengu" />
       <div class="about-card--right">
         <img src="@/assets/images/pp.jpg" alt="ME" />
@@ -60,6 +60,9 @@
 import Skills from "@/components/Skills.vue";
 
 export default {
+  props: {
+    active: Boolean
+  },
   components: {
     Skills
   },

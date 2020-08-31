@@ -9,7 +9,7 @@
     }"
   >
     <h2>Contact</h2>
-    <div class="contact-card">
+    <div class="contact-card" :class="{ active, inactive: !active }">
       <img src="@/assets/images/ios-blackWhite.png" alt="Pengu" />
       <div class="contact-card--left"></div>
       <div class="contact-card--right">
@@ -71,6 +71,9 @@
 import SocialIcons from "@/components/SocialIcons.vue";
 
 export default {
+  props: {
+    active: Boolean
+  },
   components: {
     SocialIcons
   },

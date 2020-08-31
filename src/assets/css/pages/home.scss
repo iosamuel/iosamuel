@@ -13,7 +13,7 @@
     background: $darkblue;
 
     > img {
-      @apply absolute z-20;
+      @apply absolute z-20 transition-all duration-700;
       width: 50px;
       height: 50px;
       left: calc(50% - 25px);
@@ -28,6 +28,20 @@
         @apply relative;
         bottom: 5rem;
         max-width: 75%;
+      }
+
+      &-enter-active {
+        animation: goLeft 1s;
+      }
+
+      @keyframes goLeft {
+        from {
+          clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+        }
+
+        to {
+          clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+        }
       }
     }
 
@@ -44,6 +58,25 @@
 
       .social-icon {
         @apply w-10 h-10 text-center;
+      }
+
+      &-enter-active {
+        animation: goBottom 0.5s;
+        animation-delay: 1s;
+      }
+
+      @keyframes goBottom {
+        0% {
+          @apply h-10;
+        }
+
+        50% {
+          @apply h-5;
+        }
+
+        100% {
+          @apply h-10;
+        }
       }
     }
 
@@ -92,6 +125,21 @@
           border-right: 1.75rem solid transparent;
           left: 0;
         }
+      }
+    }
+
+    &.active {
+      > img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &.inactive {
+      > img {
+        width: 0;
+        height: 0;
+        left: calc(50%);
       }
     }
   }
