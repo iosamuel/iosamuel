@@ -31,7 +31,11 @@
           <span>Contact</span>
         </button>
       </section>
-      <button class="burger" @click="showNavContent = !showNavContent">
+      <button
+        class="burger"
+        @click="showNavContent = !showNavContent"
+        aria-label="Abrir menú"
+      >
         <fa :icon="['fas', 'bars']"></fa>
       </button>
     </nav>

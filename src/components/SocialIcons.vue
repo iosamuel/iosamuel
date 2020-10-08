@@ -7,6 +7,7 @@
       :class="`social-icon ${icon.name}`"
       rel="noopener noreferrer"
       target="_blank"
+      :aria-label="`Link a ${icon.name}`"
     >
       <fa :icon="['fab', icon.name]"></fa>
     </a>
@@ -21,6 +22,7 @@
         :class="`social-icon ${icon.name}`"
         rel="noopener noreferrer"
         target="_blank"
+        :aria-label="`Link a ${icon.name}`"
       >
         <fa :icon="['fab', icon.name]"></fa>
       </a>

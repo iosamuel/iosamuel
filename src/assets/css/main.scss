@@ -4,11 +4,13 @@
 @font-face {
   font-family: ND_LOGOS_REGULAR;
   src: url("../fonts/ND_LOGOS_REGULAR.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Ubuntu;
   src: url("../fonts/Ubuntu-Regular.ttf");
+  font-display: swap;
 }
 
 body {

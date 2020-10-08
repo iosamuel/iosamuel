@@ -31,7 +31,11 @@
           <p>
             Amo las comunidades y siempre busco organizar o participar en ellas.
             Hago parte de
-            <a href="https://discord.gg/mucYjqJ" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="https://discord.gg/mucYjqJ"
+              target="_blank"
+            >
               #EStreamerCoders
             </a>
             , una comunidad de streamers programadores en español, donde hago

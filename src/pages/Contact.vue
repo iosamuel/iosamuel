@@ -17,7 +17,11 @@
           <h3>Comunidad</h3>
           <p>
             Puedes hacer parte
-            <a href="https://discord.gg/mucYjqJ" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="https://discord.gg/mucYjqJ"
+              target="_blank"
+            >
               #EStremaerCoders
             </a>
             y ver todo el contenido en español que estamos generando para el
@@ -29,6 +33,7 @@
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
+              aria-label="Link a discord"
             >
               <fa :icon="['fab', 'discord']"></fa>
             </a>

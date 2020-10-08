@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <button @click="navigateTo()">
+    <button @click="navigateTo()" aria-label="Volver arriba">
       <fa :icon="['fas', 'arrow-circle-up']"></fa>
     </button>
   </footer>

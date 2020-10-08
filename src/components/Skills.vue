@@ -9,6 +9,7 @@
         content: icon.text,
         trigger: 'hover click focus'
       }"
+      :aria-label="`Habilidad ${icon.icon}`"
     >
       <fa :icon="['fab', icon.icon]"></fa>
     </button>
