@@ -59,6 +59,7 @@
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
+              aria-label="Link a discord"
             >
               <fa :icon="['fab', 'discord']"></fa>
             </a>
