@@ -25,7 +25,7 @@
           </p>
           <div class="discord-icon">
             <a
-              href="https://discord.gg/hRnfXTZ"
+              href="https://discord.gg/3nhN8TE"
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
@@ -50,7 +50,7 @@
         >
           <div class="discord-icon">
             <a
-              href="https://discord.gg/hRnfXTZ"
+              href="https://discord.gg/3nhN8TE"
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
