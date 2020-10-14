@@ -1,4 +1,4 @@
-![Samuel Burbano - @iosamuel](https://raw.githubusercontent.com/iosamuel/iosamuel/vue/src/assets/images/iosamuel.png)
+![Samuel Burbano - @iosamuel](https://raw.githubusercontent.com/iosamuel/iosamuel/vue/public/iosamuel.png)
 
 <p align="center">
     <a href="https://twitter.com/iosamuel">
