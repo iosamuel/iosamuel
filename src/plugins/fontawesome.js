@@ -5,7 +5,8 @@ import {
   faBars,
   faArrowCircleUp,
   faArrowCircleRight,
-  faArrowCircleLeft
+  faArrowCircleLeft,
+  faGlobe
 } from "@fortawesome/free-solid-svg-icons";
 import { faHandPointer } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -37,6 +38,7 @@ library.add(
   faArrowCircleUp,
   faArrowCircleRight,
   faArrowCircleLeft,
+  faGlobe,
   faTwitter,
   faFacebook,
   faLinkedin,

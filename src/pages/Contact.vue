@@ -14,26 +14,26 @@
       <div class="contact-card--left"></div>
       <div class="contact-card--right">
         <div class="right__content">
-          <h3>Comunidad</h3>
-          <p>
-            Puedes hacer parte
-            <a
-              rel="noopener noreferrer"
-              href="https://discord.gg/mucYjqJ"
-              target="_blank"
-            >
-              #EStremaerCoders
-            </a>
-            y ver todo el contenido en español que estamos generando para el
-            mundo
-          </p>
+          <h3 v-t="'contact.comunidad'"></h3>
+          <i18n path="contact.comunidad_explicacion" tag="p">
+            <template #estreamercoders>
+              <a
+                rel="noopener noreferrer"
+                href="https://discord.gg/mucYjqJ"
+                target="_blank"
+                aria-label="discord link"
+              >
+                #EStremaerCoders
+              </a>
+            </template>
+          </i18n>
           <div class="discord-icon">
             <a
               href="https://discord.gg/3nhN8TE"
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
-              aria-label="Link a discord"
+              aria-label="discord link"
             >
               <fa :icon="['fab', 'discord']"></fa>
             </a>
@@ -41,12 +41,12 @@
               <fa :icon="['far', 'hand-pointer']"></fa>
             </span>
           </div>
-          <h3>Me</h3>
-          <p>
-            Puedes seguirme a través de mis redes sociales Twitter, Facebook,
-            Twitch, etc. O puedes escribirme a
-            <a href="mailto:me@iosamuel.dev">me@iosamuel.dev</a>
-          </p>
+          <h3 v-t="'contact.yo'"></h3>
+          <i18n path="contact.yo_descripcion" tag="p">
+            <template #mailto>
+              <a href="mailto:me@iosamuel.dev">me@iosamuel.dev</a>
+            </template>
+          </i18n>
         </div>
         <SocialIcons
           className="contact-card--bottom"
@@ -59,7 +59,7 @@
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
-              aria-label="Link a discord"
+              aria-label="discord link"
             >
               <fa :icon="['fab', 'discord']"></fa>
             </a>

@@ -16,43 +16,29 @@
       </div>
       <div class="about-card--left">
         <div class="left__content">
-          <h3>Historia</h3>
-          <p>
-            Soy Samuel Burbano, estudio programacion desde que tengo 12 años,
-            trabajo en el ambito profesional de la programacion desde los 14, a
-            dia de hoy tengo 23 años y cada dia me enamoro mas de este
-            maravilloso mundo.
-          </p>
-          <p>
-            He trabajado en tecnologias de backend y frontend, en los ultimos
-            5-6 años me he dedicado al frontend y actualmente soy Senior
-            Frontend Developer.
-          </p>
-          <p>
-            Amo las comunidades y siempre busco organizar o participar en ellas.
-            Hago parte de
-            <a
-              rel="noopener noreferrer"
-              href="https://discord.gg/mucYjqJ"
-              target="_blank"
-            >
-              #EStreamerCoders
-            </a>
-            , una comunidad de streamers programadores en español, donde hago
-            streams regularmente sobre JavaScript y VueJS
-          </p>
-          <h3>Frase</h3>
+          <h3 v-t="'about.historia'"></h3>
+          <p v-t="'about.historia_p1'"></p>
+          <p v-t="'about.historia_p2'"></p>
+          <i18n path="about.historia_p3" tag="p">
+            <template #estreamercoders>
+              <a
+                rel="noopener noreferrer"
+                href="https://discord.gg/mucYjqJ"
+                target="_blank"
+                aria-label="discord link"
+              >
+                #EStreamerCoders
+              </a>
+            </template>
+          </i18n>
+          <h3 v-t="'about.frase'"></h3>
           <p>
             <em>
               “ Coding is easy, logically coding is what makes it special
             </em>
           </p>
-          <p>
-            Cualquiera puede programar, pero aprender a programar “bien” y
-            usando la logica es algo que se aprende a traves de los años con
-            practica y diligencia
-          </p>
-          <h3>Skills</h3>
+          <p v-t="'about.frase_explicacion'"></p>
+          <h3>{{ $tc("about.habilidades", 3) }}</h3>
         </div>
       </div>
       <Skills />

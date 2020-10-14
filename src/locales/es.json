@@ -1,0 +1,21 @@
+{
+  "home": {
+    "io": "Viene de Input/Output, como el flujo de todo sistema informatico, representando las entradas y salidas",
+    "samuel": "Mi nombre, mucho gusto! Te invito a seguirme en mis redes sociales y asi estar atento a nuevas noticias"
+  },
+  "about": {
+    "historia": "Historia",
+    "historia_p1": "Soy Samuel Burbano, estudio programacion desde que tengo 12 años, trabajo en el ambito profesional de la programacion desde los 14, a dia de hoy tengo 23 años y cada dia me enamoro mas de este maravilloso mundo.",
+    "historia_p2": "He trabajado en tecnologias de backend y frontend, en los ultimos 5 a 6 años me he dedicado al frontend y actualmente soy Senior Frontend Developer.",
+    "historia_p3": "Amo las comunidades tecnologicas y siempre busco organizar o participar en ellas. Hago parte de {estreamercoders}, una comunidad de streamers programadores en español, donde hago streams regularmente sobre JavaScript y VueJS",
+    "frase": "Frase",
+    "frase_explicacion": "Cualquiera puede programar, pero aprender a programar “bien” y usando la logica es algo que se aprende a traves de los años con practica y diligencia",
+    "habilidades": "Habilidad | Habilidades"
+  },
+  "contact": {
+    "comunidad": "Comunidad",
+    "comunidad_explicacion": "Puedes hacer parte {estreamercoders} y ver todo el contenido en español que estamos generando para el mundo",
+    "yo": "Yo",
+    "yo_descripcion": "Puedes seguirme a través de mis redes sociales Twitter, Facebook, Twitch, etc. O puedes escribirme a {mailto}"
+  }
+}

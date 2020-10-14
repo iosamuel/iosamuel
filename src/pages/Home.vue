@@ -19,15 +19,9 @@
       <div class="home-card--right">
         <div class="right__content">
           <h3>IO</h3>
-          <p>
-            Viene de Input/Output, como el flujo de todo sistema informatico,
-            representando las entradas y salidas
-          </p>
+          <p v-t="'home.io'"></p>
           <h3>Samuel</h3>
-          <p>
-            Mi nombre, mucho gusto! Te invito a seguirme en mis redes sociales y
-            asi estar atento a nuevas noticias
-          </p>
+          <p v-t="'home.samuel'"></p>
         </div>
         <transition appear name="home-card--bottom">
           <SocialIcons className="home-card--bottom"></SocialIcons>

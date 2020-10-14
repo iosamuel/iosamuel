@@ -34,7 +34,7 @@
       <button
         class="burger"
         @click="showNavContent = !showNavContent"
-        aria-label="Abrir menú"
+        :aria-label="$t('abrir')"
       >
         <fa :icon="['fas', 'bars']"></fa>
       </button>
@@ -60,3 +60,14 @@ export default {
 </script>
 
 <style lang="scss" src="@/assets/css/components/header.scss"></style>
+
+<i18n>
+{
+  "es": {
+    "abrir": "Abrir menú"
+  },
+  "en": {
+    "abrir": "Open menu"
+  }
+}
+</i18n>
