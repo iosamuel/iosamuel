@@ -15,7 +15,11 @@
       <div class="contact-card--right">
         <div class="right__content">
           <h3 v-t="'contact.comunidad'"></h3>
-          <i18n path="contact.comunidad_explicacion" tag="p">
+          <i18n-t
+            keypath="contact.comunidad_explicacion"
+            tag="p"
+            scope="global"
+          >
             <template #estreamercoders>
               <a
                 rel="noopener noreferrer"
@@ -26,7 +30,7 @@
                 #EStremaerCoders
               </a>
             </template>
-          </i18n>
+          </i18n-t>
           <div class="discord-icon">
             <a
               href="https://discord.gg/3nhN8TE"
@@ -42,11 +46,11 @@
             </span>
           </div>
           <h3 v-t="'contact.yo'"></h3>
-          <i18n path="contact.yo_descripcion" tag="p">
+          <i18n-t keypath="contact.yo_descripcion" tag="p" scope="global">
             <template #mailto>
               <a href="mailto:me@iosamuel.dev">me@iosamuel.dev</a>
             </template>
-          </i18n>
+          </i18n-t>
         </div>
         <SocialIcons
           className="contact-card--bottom"

@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <button @click="navigateTo()" :aria-label="$t('volver')">
+    <button @click="navigateTo()" :aria-label="t('volver')">
       <fa :icon="['fas', 'arrow-circle-up']"></fa>
     </button>
     <LocaleSwitcher />
@@ -8,10 +8,16 @@
 </template>
 
 <script>
-import LocaleSwitcher from "./LocaleSwitcher.vue";
+import { useI18n } from "vue-i18n";
+import LocaleSwitcher from "@/components/LocaleSwitcher.vue";
+
 export default {
   components: {
     LocaleSwitcher
+  },
+  setup() {
+    const { t } = useI18n();
+    return { t };
   },
   methods: {
     navigateTo() {

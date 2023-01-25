@@ -34,7 +34,7 @@
       <button
         class="burger"
         @click="showNavContent = !showNavContent"
-        :aria-label="$t('abrir')"
+        :aria-label="t('abrir')"
       >
         <fa :icon="['fas', 'bars']"></fa>
       </button>
@@ -43,12 +43,18 @@
 </template>
 
 <script>
+import { useI18n } from "vue-i18n";
+
 export default {
   props: ["active"],
   data() {
     return {
       showNavContent: false
     };
+  },
+  setup() {
+    const { t } = useI18n();
+    return { t };
   },
   methods: {
     navigateTo(where) {

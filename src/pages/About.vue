@@ -12,14 +12,14 @@
     <div class="about-card" :class="{ active, inactive: !active }">
       <img src="@/assets/images/ios-blackWhite.png" alt="Pengu" />
       <div class="about-card--right">
-        <img src="@/assets/images/pp.jpg" alt="ME" />
+        <img src="@/assets/images/pp.jpeg" alt="ME" />
       </div>
       <div class="about-card--left">
         <div class="left__content">
           <h3 v-t="'about.historia'"></h3>
           <p v-t="'about.historia_p1'"></p>
           <p v-t="'about.historia_p2'"></p>
-          <i18n path="about.historia_p3" tag="p">
+          <i18n-t keypath="about.historia_p3" tag="p" scope="global">
             <template #estreamercoders>
               <a
                 rel="noopener noreferrer"
@@ -30,7 +30,7 @@
                 #EStreamerCoders
               </a>
             </template>
-          </i18n>
+          </i18n-t>
           <h3 v-t="'about.frase'"></h3>
           <p>
             <em>
@@ -38,7 +38,7 @@
             </em>
           </p>
           <p v-t="'about.frase_explicacion'"></p>
-          <h3>{{ $tc("about.habilidades", 3) }}</h3>
+          <h3>{{ $t("about.habilidades", 3) }}</h3>
         </div>
       </div>
       <Skills />

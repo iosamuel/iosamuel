@@ -6,10 +6,13 @@
       :class="icon.icon"
       class="skills__icon"
       v-tooltip.bottom-start="{
-        content: $t(icon.icon),
-        trigger: 'hover click focus'
+        content: t(icon.icon),
+        triggers: ['hover', 'click', 'focus'],
+        delay: {
+          show: 0
+        }
       }"
-      :aria-label="`${$tc('about.habilidades', 1)} ${icon.icon}`"
+      :aria-label="`${$t('about.habilidades', 1)} ${icon.icon}`"
     >
       <fa :icon="['fab', icon.icon]"></fa>
     </button>
@@ -17,6 +20,8 @@
 </template>
 
 <script>
+import { useI18n } from "vue-i18n";
+
 export default {
   data() {
     return {
@@ -71,13 +76,17 @@ export default {
         }
       ]
     };
+  },
+  setup() {
+    const { t } = useI18n();
+    return { t };
   }
 };
 </script>
 
 <style lang="scss">
 .skills {
-  @apply relative mx-auto w-64 z-30 grid grid-flow-row grid-cols-3 grid-rows-4 row-gap-6;
+  @apply relative mx-auto w-64 z-30 grid grid-flow-row grid-cols-3 grid-rows-4 gap-y-6;
 
   &__icon {
     @apply text-4xl flex items-center justify-center;
@@ -161,36 +170,38 @@ export default {
   }
 }
 
-.tooltip {
-  @apply block z-50 max-w-sm;
+.v-popper {
+  &__popper {
+    @apply block z-50 max-w-sm;
 
-  .tooltip-inner {
-    @apply bg-black text-white rounded-md p-4;
-  }
+    &[data-popper-placement^="bottom"] {
+      @apply mt-2;
 
-  .tooltip-arrow {
-    @apply w-0 h-0 absolute border border-black border-solid z-10;
-  }
+      .v-popper__arrow-container {
+        @apply border-8 border-t-0 mt-0 mb-0;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        top: -8px;
+        left: calc(50% - 4px);
+      }
+    }
 
-  &[x-placement^="bottom"] {
-    @apply mt-2;
+    &[aria-hidden="true"] {
+      @apply invisible opacity-0 transition-all ease-in duration-75;
+    }
 
-    .tooltip-arrow {
-      @apply border-8 border-t-0 mt-0 mb-0;
-      border-left-color: transparent;
-      border-right-color: transparent;
-      border-top-color: transparent;
-      top: -8px;
-      left: calc(50% - 4px);
+    &[aria-hidden="false"] {
+      @apply visible opacity-100 transition-opacity ease-in duration-75;
     }
   }
 
-  &[aria-hidden="true"] {
-    @apply invisible opacity-0 transition-all ease-in duration-75;
+  &__inner {
+    @apply bg-black text-white rounded-md p-4;
   }
 
-  &[aria-hidden="false"] {
-    @apply visible opacity-100 transition-opacity ease-in duration-75;
+  &__arrow-container {
+    @apply w-0 h-0 absolute border border-black border-solid z-10;
   }
 }
 </style>

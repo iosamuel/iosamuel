@@ -1,17 +1,16 @@
-import Vue from "vue";
-import "./plugins/fontawesome";
-import App from "./App.vue";
-import "./assets/css/main.scss";
-import { VTooltip } from "v-tooltip";
-import ObserveVisibility from "vue-observe-visibility/src/directives/observe-visibility";
-import i18n from "./i18n";
+import { ViteSSG } from "vite-ssg/single-page";
+import ObserveVisibility from "@/directives/observe-visibility";
+import i18n from "@/plugins/i18n";
+import Fontawesome from "@/plugins/fontawesome";
+import FloatingVue from "floating-vue";
+import App from "@/App.vue";
 
-Vue.directive("observe-visibility", ObserveVisibility);
-Vue.directive("tooltip", VTooltip);
+import "@/assets/css/main.scss";
+import "floating-vue/dist/style.css";
 
-Vue.config.productionTip = false;
-
-new Vue({
-  i18n,
-  render: h => h(App)
-}).$mount("#app");
+export const createApp = ViteSSG(App, ({ app }) => {
+  app.use(i18n);
+  app.use(Fontawesome);
+  app.use(FloatingVue);
+  app.directive("observe-visibility", ObserveVisibility);
+});

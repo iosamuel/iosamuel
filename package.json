@@ -1,41 +1,33 @@
 {
   "name": "iosamuel",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.15",
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
-    "@fortawesome/free-regular-svg-icons": "^5.13.0",
-    "@fortawesome/free-solid-svg-icons": "^5.7.2",
-    "@fortawesome/vue-fontawesome": "^0.1.5",
-    "core-js": "^3.6.4",
-    "v-tooltip": "^2.0.3",
-    "vue": "^2.6.11",
-    "vue-i18n": "^8.17.3",
-    "vue-observe-visibility": "iosamuel/vue-observe-visibility"
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "floating-vue": "^2.0.0-beta.20",
+    "sass": "^1.55.0",
+    "vue": "^3.2.41",
+    "vue-i18n": "^9.1.0",
+    "vue-observe-visibility": "iosamuel/vue-observe-visibility#next"
   },
   "devDependencies": {
-    "@intlify/vue-i18n-loader": "^1.0.0",
-    "@vue/cli-plugin-babel": "^4.5.7",
-    "@vue/cli-plugin-eslint": "^4.5.7",
-    "@vue/cli-service": "^4.5.7",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
-    "prettier": "^1.19.1",
-    "sass-loader": "^8.0.2",
-    "vue-cli-plugin-fontawesome": "^0.3.1",
-    "vue-cli-plugin-i18n": "~1.0.1",
-    "vue-cli-plugin-tailwind": "^1.5.0",
-    "vue-template-compiler": "^2.6.11"
+    "@intlify/unplugin-vue-i18n": "^0.7.1",
+    "@vitejs/plugin-vue": "^3.1.2",
+    "@vueuse/head": "^0.9.8",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1",
+    "vite": "^3.1.8",
+    "vite-ssg": "^0.21.2"
   }
 }

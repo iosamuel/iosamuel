@@ -1,6 +1,5 @@
-import Vue from "vue";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
+
 import {
   faBars,
   faArrowCircleUp,
@@ -8,7 +7,9 @@ import {
   faArrowCircleLeft,
   faGlobe
 } from "@fortawesome/free-solid-svg-icons";
+
 import { faHandPointer } from "@fortawesome/free-regular-svg-icons";
+
 import {
   faTwitter,
   faFacebook,
@@ -31,6 +32,7 @@ import {
   faLinux,
   faPython
 } from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(
@@ -62,4 +64,8 @@ library.add(
   faPython
 );
 
-Vue.component("fa", FontAwesomeIcon);
+export default {
+  install: (app) => {
+    app.component("fa", FontAwesomeIcon);
+  }
+};
