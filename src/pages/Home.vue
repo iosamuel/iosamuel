@@ -8,7 +8,7 @@
       }
     }"
   >
-    <h2>HOME</h2>
+    <h1>Samuel Burbano</h1>
     <div class="home-card" :class="{ active, inactive: !active }">
       <img src="@/assets/images/ios-blackWhite.png" alt="Pengu" />
       <transition appear name="home-card--left">

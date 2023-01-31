@@ -47,8 +47,8 @@ header {
     }
 
     .nav-content {
-      button {
-        @apply text-white text-lg;
+      a {
+        @apply text-white text-lg flex items-center justify-center;
         font-family: ND_LOGOS_REGULAR;
 
         &:focus {
@@ -69,7 +69,7 @@ header {
         box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
         top: 5rem;
 
-        button {
+        a {
           @apply h-20 bg-black;
 
           &.active {
@@ -101,7 +101,7 @@ header {
       .nav-content {
         @apply w-full h-full flex items-center justify-evenly;
 
-        button {
+        a {
           span {
             @apply border-b-4 border-white;
           }

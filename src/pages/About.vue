@@ -31,7 +31,7 @@
               </a>
             </template>
           </i18n-t>
-          <h3>{{ $t("about.frase") }}></h3>
+          <h3>{{ $t("about.frase") }}</h3>
           <p>
             <em>
               “ Coding is easy, logically coding is what makes it special

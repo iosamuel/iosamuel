@@ -3,35 +3,36 @@
     <figure>
       <img src="@/assets/images/IOS-Isotipo.png" alt="Logo" />
       <figcaption>
-        <h1>
-          <span>IO</span>
-          <span>Samuel</span>
-        </h1>
+        <span>IO</span>
+        <span>Samuel</span>
       </figcaption>
     </figure>
     <nav :class="{ 'show-nav': showNavContent }">
       <section class="nav-content">
-        <button
+        <a
+          href="#home"
           class="nav-content__button"
           :class="{ active: active === 'home' }"
-          @click="navigateTo('home')"
+          @click.prevent="navigateTo('home')"
         >
           <span>Home</span>
-        </button>
-        <button
+        </a>
+        <a
+          href="#about"
           class="nav-content__button"
           :class="{ active: active === 'about' }"
-          @click="navigateTo('about')"
+          @click.prevent="navigateTo('about')"
         >
           <span>About</span>
-        </button>
-        <button
+        </a>
+        <a
+          href="#contact"
           class="nav-content__button"
           :class="{ active: active === 'contact' }"
-          @click="navigateTo('contact')"
+          @click.prevent="navigateTo('contact')"
         >
           <span>Contact</span>
-        </button>
+        </a>
       </section>
       <button
         class="burger"
