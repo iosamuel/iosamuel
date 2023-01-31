@@ -19,9 +19,9 @@
       <div class="home-card--right">
         <div class="right__content">
           <h3>IO</h3>
-          <p v-t="'home.io'"></p>
+          <p>{{ $t("home.io") }}</p>
           <h3>Samuel</h3>
-          <p v-t="'home.samuel'"></p>
+          <p>{{ $t("home.samuel") }}</p>
         </div>
         <transition appear name="home-card--bottom">
           <SocialIcons className="home-card--bottom"></SocialIcons>

@@ -16,9 +16,9 @@
       </div>
       <div class="about-card--left">
         <div class="left__content">
-          <h3 v-t="'about.historia'"></h3>
-          <p v-t="'about.historia_p1'"></p>
-          <p v-t="'about.historia_p2'"></p>
+          <h3>{{ $t("about.historia") }}</h3>
+          <p>{{ $t("about.historia_p1") }}</p>
+          <p>{{ $t("about.historia_p2") }}</p>
           <i18n-t keypath="about.historia_p3" tag="p" scope="global">
             <template #estreamercoders>
               <a
@@ -31,13 +31,13 @@
               </a>
             </template>
           </i18n-t>
-          <h3 v-t="'about.frase'"></h3>
+          <h3>{{ $t("about.frase") }}></h3>
           <p>
             <em>
               “ Coding is easy, logically coding is what makes it special
             </em>
           </p>
-          <p v-t="'about.frase_explicacion'"></p>
+          <p>{{ $t("about.frase_explicacion") }}</p>
           <h3>{{ $t("about.habilidades", 3) }}</h3>
         </div>
       </div>

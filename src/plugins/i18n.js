@@ -10,14 +10,12 @@ export default createI18n({
 });
 
 function getLocale() {
-  if (import.meta.env.SSR) return import.meta.env.VITE_I18N_LOCALE;
+  let locale = import.meta.env.VITE_I18N_LOCALE || "es";
 
-  console.log(import.meta.env.SSR);
+  if (import.meta.env.SSR) return locale;
 
   const LSLocale = localStorage.getItem("locale");
   if (LSLocale) return LSLocale;
-
-  let locale = import.meta.env.VITE_I18N_LOCALE || "es";
 
   const userLocale = navigator?.languages?.[0] || navigator?.language;
 

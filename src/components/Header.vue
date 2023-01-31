@@ -3,8 +3,10 @@
     <figure>
       <img src="@/assets/images/IOS-Isotipo.png" alt="Logo" />
       <figcaption>
-        <span>IO</span>
-        <span>Samuel</span>
+        <h1>
+          <span>IO</span>
+          <span>Samuel</span>
+        </h1>
       </figcaption>
     </figure>
     <nav :class="{ 'show-nav': showNavContent }">

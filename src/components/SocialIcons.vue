@@ -57,7 +57,7 @@ export default {
           name: "twitch"
         },
         {
-          link: "https://youtube.com/channel/UCTvtM8ZisSrp9rii77D85Zw",
+          link: "https://youtube.com/iosamuel",
           name: "youtube"
         }
       ]

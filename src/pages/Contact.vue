@@ -14,7 +14,7 @@
       <div class="contact-card--left"></div>
       <div class="contact-card--right">
         <div class="right__content">
-          <h3 v-t="'contact.comunidad'"></h3>
+          <h3>{{ $t("contact.comunidad") }}</h3>
           <i18n-t
             keypath="contact.comunidad_explicacion"
             tag="p"
@@ -45,7 +45,7 @@
               <fa :icon="['far', 'hand-pointer']"></fa>
             </span>
           </div>
-          <h3 v-t="'contact.yo'"></h3>
+          <h3>{{ $t("contact.yo") }}</h3>
           <i18n-t keypath="contact.yo_descripcion" tag="p" scope="global">
             <template #mailto>
               <a href="mailto:me@iosamuel.dev">me@iosamuel.dev</a>
@@ -59,7 +59,7 @@
         >
           <div class="discord-icon">
             <a
-              href="https://discord.gg/3nhN8TE"
+              href="https://discord.gg/mucYjqJ"
               target="_blank"
               class="social-icon discord"
               rel="noopener noreferrer"
